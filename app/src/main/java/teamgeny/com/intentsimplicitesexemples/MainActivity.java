@@ -36,8 +36,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public void sendSMS() {
-        Intent sendSMSIntent = new Intent(Intent.ACTION_VIEW);
-        sendSMSIntent.setData(Uri.parse("sms:"));
+        Intent sendSMSIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("sms:"));
         sendSMSIntent.putExtra("sms_body", "bla bla bla");
         startActivity(sendSMSIntent);
     }
